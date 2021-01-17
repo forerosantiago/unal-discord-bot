@@ -21,6 +21,7 @@
     "discord.js": "^12.5.1",
     "discord.js-commando": "github:discordjs/Commando",
     "dotenv": "^8.2.0",
+    "minecraft-server-util": "^3.4.2",
     "randomcolor": "^0.6.2"
   }
 }
