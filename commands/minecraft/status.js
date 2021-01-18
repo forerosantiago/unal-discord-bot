@@ -50,7 +50,6 @@ module.exports = class StatusCommand extends Command {
             .then(function () {
                 statusEmbed
                     .setTitle(process.env.IP)
-                    //.attachFiles(attachment)
                     .setThumbnail('https://media.discordapp.net/attachments/784106675976011787/800433670980108328/logotipo_unal.png')
                     .setFooter(message.member.displayName, message.author.avatarURL());
 
