@@ -18,16 +18,14 @@ module.exports = class StatusCommand extends Command {
     util
       .status(process.env.IP)
       .then((response) => {
-        statusEmbed
-          .setColor("#2ECC40")
-          .addFields(
-            { name: "Estado", value: "ON", inline: true },
-            {
-              name: "Personas online",
-              value: `${response.onlinePlayers} / ${response.maxPlayers}`,
-              inline: true,
-            }
-          );
+        statusEmbed.setColor("#2ECC40").addFields(
+          { name: "Estado", value: "ON", inline: true },
+          {
+            name: "Personas online",
+            value: `${response.onlinePlayers} / ${response.maxPlayers}`,
+            inline: true,
+          }
+        );
 
         let players = ""; // string with a portion of online players
         if (response.samplePlayers != null) {
