@@ -1,4 +1,8 @@
 # UNAL
+![Uptime Robot ratio (7 days)](https://img.shields.io/uptimerobot/ratio/7/m786943479-45778685885ac67eb5e6e3b0?style=for-the-badge)
+[![](https://img.shields.io/discord/782081352396832778?color=%20%237289da%20&label=SERVIDOR%20DE%20SOPORTE&logo=DISCORD&style=for-the-badge)](https://discord.gg/J9stY4Ks2T)
+
+
 Bot de Discord de la Universidad Nacional de Colombia
 
 ## Comandos
@@ -18,4 +22,4 @@ Comandos de la Universidad
 - `!setleavechannel`: Configura el canal donde se registran las entradas de un servidor.
 - `!setwelcomechannel`: Configura el canal donde se registran las salidas de un servidor.
 
-Hecho con amor por Santiago Forero &#9829; distribuido bajo la licencia [MIT](https://forero.mit-license.org/)
+Hecho con &#9829; por Santiago Forero distribuido bajo la licencia [MIT](https://forero.mit-license.org/)
