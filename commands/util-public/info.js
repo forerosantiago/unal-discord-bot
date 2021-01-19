@@ -24,7 +24,7 @@ module.exports = class PingCommand extends Command {
                 { name: "Servidores", value: this.client.guilds.cache.size },
                 { name: "Usuarios", value: this.client.users.cache.size },
                 { name: "Memoria", value: (process.memoryUsage().heapUsed / 1048576).toFixed(2) + "MB" },
-                { name: "Link de Invitación", value: ("https://discord.com/api/oauth2/authorize?client_id=780526166561521716&permissions=8&scope=bot"},
+                { name: "Link de Invitación", value: "https://discord.com/api/oauth2/authorize?client_id=780526166561521716&permissions=8&scope=bot"},
                 { name: "Código Fuente", value: "https://github.com/forerosantiago/unal-discord" },
             )
         message.embed(infoEmbed)
