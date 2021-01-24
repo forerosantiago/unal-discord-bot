@@ -16,6 +16,8 @@ Comandos de la Universidad
 - `!status`: Información en tiempo real del estado del servidor, como jugadores en linea.
 
 ### General
+- `!say`: Repite un mensaje.
+- `!edit`: Edita un mensaje enviado por el bot, solo para personas con permisos de mensajes.
 - `!info`: Información técnica del bot, como número de usuarios y uso de memoria.
 
 ### Configuración
