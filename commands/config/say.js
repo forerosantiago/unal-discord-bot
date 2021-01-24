@@ -11,7 +11,7 @@ module.exports = class SetWelcomeCommand extends Command {
             args: [
                 {
                     key: 'text',
-                    prompt: '¿Qué le gustaría que el bot repitiera?',
+                    prompt: '¿Qué le gustaría que el bot dijera?',
                     type: 'string',
                 },
             ],
