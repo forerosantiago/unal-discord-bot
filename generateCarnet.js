@@ -1,7 +1,7 @@
 const Canvas = require("canvas");
-const { MessageAttachment } = require("discord.js");
 
-Canvas.registerFont(__dirname + "/../assets/AncizarSans_Bold.ttf", {
+
+Canvas.registerFont(__dirname + "/assets/AncizarSans_Bold.ttf", {
   family: "AncizarSans_Bold",
 });
 
@@ -16,10 +16,9 @@ async function generateCarnet(user) {
     user.displayAvatarURL({ format: "jpg" })
   );
 
-  // Choose randomly between two models
-  if (Math.random() < 0.5) {
+  if (user.id % 2 == 0) {
     const background = await Canvas.loadImage(
-      __dirname + "/../assets/carnet-1.png"
+      __dirname + "/assets/carnet-1.png"
     );
 
     // Use template
@@ -34,7 +33,7 @@ async function generateCarnet(user) {
   } else {
     // Use the other template
     const background = await Canvas.loadImage(
-      __dirname + "/../assets/carnet-2.png"
+      __dirname + "/assets/carnet-2.png"
     );
     ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
