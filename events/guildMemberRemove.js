@@ -1,3 +1,6 @@
+const Discord = require('discord.js');
+const {randomColor} = require('randomcolor');
+
 const db = require("quick.db");
 
 module.exports = {
@@ -8,7 +11,7 @@ module.exports = {
         const channel = client.channels.cache.get(channel_id);
       
         if (!channel) return;
-        const leaveEmbed = new MessageEmbed()
+        const leaveEmbed = new Discord.MessageEmbed()
           .setDescription(`\`${member.user.tag}\` nos ha dejado :broken_heart:`)
           .setColor(randomColor());
       
