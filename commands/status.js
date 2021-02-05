@@ -17,7 +17,12 @@ module.exports = {
 
         util.status(process.env.IP).then((result) => {
             let players = [];
-            result.samplePlayers.forEach(player => players.push(player.name));
+            if(result.onlinePlayers == 0) {
+                players = ['Nadie.']
+            } else {
+                result.samplePlayers.forEach(player => players.push(player.name));
+            }
+            
 
             embed.setColor('#2ecc40')
             embed.addFields(
