@@ -1,5 +1,9 @@
 # UNAL
-![Uptime Robot ratio (7 days)](https://img.shields.io/uptimerobot/ratio/7/m786943479-45778685885ac67eb5e6e3b0?style=for-the-badge)
+
+![Uptime](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/forerosantiago/status/master/api/unal-discord-bot/uptime.json&style=for-the-badge)
+
+![Uptime](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/forerosantiago/status/master/api/unal-discord-bot/response-time.json&style=for-the-badge)
+
 [![](https://img.shields.io/discord/782081352396832778?color=%20%237289da%20&label=SERVIDOR%20DE%20SOPORTE&logo=DISCORD&style=for-the-badge)](https://discord.gg/J9stY4Ks2T)
 
 
