@@ -12,6 +12,7 @@ module.exports = {
         .then(msg => {
             const fetchedMsg = msg.first();
             fetchedMsg.edit(args[1]);
-    });
+        })
+        .catch(() => message.channel.send('Hubo un problema, asegúrate de que tenga permisos suficientes y de que me pasaste el id correcto.'));
     }
 }

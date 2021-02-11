@@ -19,7 +19,7 @@ module.exports = {
 	if (command.permissions) {
 		const authorPerms = message.channel.permissionsFor(message.author);
 		if (!authorPerms || !authorPerms.has(command.permissions)) {
-			return message.reply('No tienes permisos para hacer eso.');
+			if(!message.author == process.env.AUTHOR) return message.reply('No tienes permisos para hacer eso.');
 		}
 	}
 
