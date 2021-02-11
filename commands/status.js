@@ -15,7 +15,8 @@ module.exports = {
             .setTitle(process.env.IP)
             .setFooter(message.member.displayName, message.author.avatarURL());
 
-        util.status(process.env.IP).then((result) => {
+        util.status(process.env.IP)
+        .then((result) => {
             let players = [];
             if(result.onlinePlayers == 0) {
                 players = ['Nadie.']
@@ -32,7 +33,14 @@ module.exports = {
             )
         })
         .catch((error) => {
-            console.error(error);
+            embed
+                .setColor('#FF4136')
+            embed.addFields(
+                { name: 'Estado', value: 'OFF', inline: true },
+                { name: 'Personas en línea', value: result.onlinePlayers + '-?- / -?-' + result.maxPlayers, inline: true },
+            )
+                
+
         })
         .then(() => message.channel.send(embed));
     }
