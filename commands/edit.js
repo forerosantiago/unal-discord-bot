@@ -8,8 +8,10 @@ module.exports = {
 
     execute(message, args){
        const id = args[0]
-        message.channel.messages.fetch({around: id, limit: 1})
+       
+       message.channel.messages.fetch({around: id, limit: 1})
         .then(msg => {
+            message.delete({timeout: 3 });
             const fetchedMsg = msg.first();
             fetchedMsg.edit(args[1]);
         })

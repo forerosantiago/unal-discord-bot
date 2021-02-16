@@ -20,7 +20,7 @@ module.exports = {
                 { name: 'Memoria', value: `${Math.round(process.memoryUsage().heapTotal / 1024 / 1024)} MB`, inline: true },
 
                 { name: 'Soporte', value: "[Servidor de soporte](https://discord.gg/J9stY4Ks2T)."},
-                { name: 'Invitación', value: "[Link de invitación](https://discord.com/api/oauth2/authorize?client_id=780526166561521716&permissions=11264&scope=bot)."},
+                { name: 'Invitación', value: "[Link de invitación](https://discord.com/api/oauth2/authorize?client_id=781665488936763413&permissions=453696&scope=bot)."},
             )
 
         message.channel.send(embed)
