@@ -1,4 +1,4 @@
-const { generateCarnet } = require("../generateCarnet");
+const { generateCarnet } = require("../../generateCarnet");
 const Discord = require('discord.js');
 const {randomColor} = require('randomcolor');
 

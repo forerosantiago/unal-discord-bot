@@ -16,7 +16,7 @@ async function generateCarnet(user) {
     user.displayAvatarURL({ format: "jpg" })
   );
 
-  if (user.id % 2 == 0) {
+  if (Math.random() % 2 == 0) {
     const background = await Canvas.loadImage(
       __dirname + "/assets/carnet-1.png"
     );

@@ -1,5 +1,3 @@
-const Discord = require('discord.js');
-const {randomColor} = require('randomcolor');
 const db = require("quick.db");
 
 module.exports = {
