@@ -3,7 +3,6 @@ module.exports = {
     description: 'Repite un mensaje dado',
     aliases: ['decir'],
     usage: '',
-    module: 'Misc',
     permissions: 'MANAGE_MESSAGES',
 
     execute(message){

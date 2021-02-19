@@ -3,7 +3,6 @@ module.exports = {
     description: 'Edita un mensaje enviado por el bot',
     aliases: ['editar'],
     usage: '',
-    module: 'Misc',
     permissions: 'MANAGE_MESSAGES',
 
     execute(message, args){

@@ -1,6 +1,7 @@
 const fs = require('fs');
 const Discord = require('discord.js');
 const { generateCarnet } = require('./generateCarnet');
+const db = require('quick.db')
 
 require('dotenv').config();
 

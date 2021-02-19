@@ -8,7 +8,6 @@ module.exports = {
     description: 'IP y versión del servidor',
     aliases: ['estado'],
     usage: '',
-    module: 'Minecraft',
     execute(message, args){
         const embed = new Discord.MessageEmbed()
         embed

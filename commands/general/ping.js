@@ -6,7 +6,6 @@ module.exports = {
     description: 'Latencia del bot y de Discord',
     aliases: ['pong', 'speed', 'latencia'],
     usage: '',
-    module: 'General',
     execute(message, args){
         const embed = new Discord.MessageEmbed()
             .setColor(randomColor())

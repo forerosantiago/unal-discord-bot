@@ -5,7 +5,6 @@ module.exports = {
     description: 'Configura el canal para el registro de salidas',
     //aliases: [],
     usage: '<#canal>',
-    module: 'Configuración',
     permissions: ['ADMINISTRATOR'],
     execute(message){
         let channel = message.mentions.channels.first();
