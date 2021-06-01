@@ -6,7 +6,7 @@ module.exports = {
   description: 'Latencia del bot y de Discord.',
   aliases: ['latencia'],
   usage: '',
-  execute (message, args) {
+  execute (message) {
     const embed = new Discord.MessageEmbed()
     embed
       .setColor(randomColor())
