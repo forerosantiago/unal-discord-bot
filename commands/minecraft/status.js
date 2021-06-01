@@ -1,47 +1,37 @@
-
-const Discord = require('discord.js');
-const {randomColor} = require('randomcolor');
-const util = require('minecraft-server-util');
+const Discord = require('discord.js')
+const util = require('minecraft-server-util')
 
 module.exports = {
-    name: 'status',
-    description: 'Latencia del bot y de Discord',
-    aliases: ['estado'],
-    usage: '',
-    module: 'Minecraft',
-    execute(message, args){
+  name: 'status',
+  description: 'Estado del servidor',
+  execute (message) {
+    util.status(process.env.ip)
+      .then((response) => {
+        let players = ''
+        if (response.onlinePlayers === 0) {
+          players = 'Nadie.'
+        } else {
+          response.samplePlayers.forEach(player => { players += player.name + ' ' })
+        }
+
         const embed = new Discord.MessageEmbed()
-        embed
-            .setTitle(process.env.IP)
-            .setFooter(message.member.displayName, message.author.avatarURL());
+          .setColor('#2ecc40')
+          .setTitle('UN Minecraft')
 
-        util.status(process.env.IP)
-        .then((result) => {
-            let players = [];
-            if(result.onlinePlayers == 0) {
-                players = ['Nadie.']
-            } else {
-                result.samplePlayers.forEach(player => players.push(player.name));
-            }
-            
+          .setDescription('Servidor de Minecraft de la Universidad Nacional de Colombia. Ping: ' + response.roundTripLatency)
+          .addFields(
+            { name: 'Personas en línea', value: response.onlinePlayers + ' / ' + response.maxPlayers, inline: true },
+            { name: 'Jugadores', value: '``' + players + '``', inline: true }
 
-            embed.setColor('#2ecc40')
-            embed.addFields(
-                { name: 'Estado', value: 'ON', inline: true },
-                { name: 'Personas en línea', value: result.onlinePlayers + ' / ' + result.maxPlayers, inline: true },
-                { name: 'Jugadores', value: `\`${players.join(', ')}...\``, inline: false },
-            )
-        })
-        .catch((error) => {
-            embed
-                .setColor('#FF4136')
-            embed.addFields(
-                { name: 'Estado', value: 'OFF', inline: true },
-                { name: 'Personas en línea', value: result.onlinePlayers + '-?- / -?-' + result.maxPlayers, inline: true },
-            )
-                
+          )
 
-        })
-        .then(() => message.channel.send(embed));
-    }
+          .setTimestamp()
+          .setFooter(message.member.displayName, message.author.avatarURL())
+        message.channel.send(embed)
+      })
+      .catch((error) => {
+        message.channel.send('server off')
+        console.log(error)
+      })
+  }
 }
