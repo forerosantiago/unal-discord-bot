@@ -7,7 +7,7 @@ module.exports = {
   description: 'Detalles técnicos del bot',
   aliases: ['informacion'],
   usage: '',
-  execute (message, args) {
+  execute (message) {
     const embed = new Discord.MessageEmbed()
       .setColor(randomColor())
       .setTitle('UNAL')
