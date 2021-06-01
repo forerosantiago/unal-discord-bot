@@ -7,7 +7,7 @@ module.exports = {
   description: 'IP y versión del servidor',
   aliases: ['estado'],
   usage: '',
-  execute (message, args) {
+  execute (message) {
     const embed = new Discord.MessageEmbed()
     embed
       .setTitle('UN Minecraft')
