@@ -1,9 +1,5 @@
 # UNAL
 
-![Uptime](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/forerosantiago/status/master/api/unal-discord-bot/uptime.json&style=for-the-badge)
-
-![Uptime](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/forerosantiago/status/master/api/unal-discord-bot/response-time.json&style=for-the-badge)
-
 [![](https://img.shields.io/discord/782081352396832778?color=%20%237289da%20&label=SERVIDOR%20DE%20SOPORTE&logo=DISCORD&style=for-the-badge)](https://discord.gg/J9stY4Ks2T)
 
 [![CodeFactor](https://www.codefactor.io/repository/github/forerosantiago/unal-discord-bot/badge)](https://www.codefactor.io/repository/github/forerosantiago/unal-discord-bot)
@@ -26,7 +22,6 @@ Comandos de la Universidad
 - `!info`: Información técnica del bot, como número de usuarios y uso de memoria.
 
 ### Configuración
-- `!setleavechannel`: Configura el canal donde se registran las entradas de un servidor.
-- `!setwelcomechannel`: Configura el canal donde se registran las salidas de un servidor.
+- `!setchannel`: Configura el canal donde se registran las entradas y salidas de un servidor.
 
 Hecho con &#9829; por Santiago Forero distribuido bajo la licencia [MIT](https://forero.mit-license.org/)
