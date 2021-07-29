@@ -30,7 +30,7 @@ module.exports = {
         message.channel.send(embed)
       })
       .catch((error) => {
-        message.channel.send('server off')
+        message.channel.send('Server Offline, <@&773750073003737088> prendan el server <a:polish_cow:847834176749305897>')
         console.log(error)
       })
   }
