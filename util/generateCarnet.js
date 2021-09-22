@@ -13,7 +13,7 @@ async function generateCarnet (user) {
   ctx.fillStyle = '#5c6164'
   const id = 'TIUN ' + user.id
   const avatar = await Canvas.loadImage(
-    user.displayAvatarURL({ format: 'jpg' })
+    user.displayAvatarURL({ format: 'png' })
   )
 
   if (Math.random() >= 0.5) {
