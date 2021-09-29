@@ -6,10 +6,6 @@ require('dotenv').config()
 const commands = []
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
 
-// Place your client and guild ids here
-const clientId = '781665488936763413'
-const guildId = '887360087713267783'
-
 for (const file of commandFiles) {
   const command = require(`./commands/${file}`)
   commands.push(command.data.toJSON())
@@ -22,7 +18,7 @@ const rest = new REST({ version: '9' }).setToken(process.env.TOKEN);
     console.log('Started refreshing application (/) commands.')
 
     await rest.put(
-      Routes.applicationGuildCommands(clientId, guildId),
+      Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID),
       { body: commands }
     )
 
