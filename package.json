@@ -18,6 +18,7 @@
   "homepage": "https://github.com/forerosantiago/unal-discord-bot#readme",
   "dependencies": {
     "@discordjs/rest": "^0.1.0-canary.0",
+    "axios": "^0.21.4",
     "canvas": "^2.8.0",
     "discord.js": "^13.1.0",
     "dotenv": "^10.0.0",
