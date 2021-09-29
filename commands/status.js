@@ -28,14 +28,12 @@ module.exports = {
           { name: 'Jugadores', value: '``' + players + '``', inline: true }
         )
         interaction.reply({ embeds: [embed] })
-
       })
 
-      .catch((error) => {
+      .catch(() => {
         embed.setDescription('Servidor offline.')
         embed.setColor('#a61c31')
         interaction.reply({ embeds: [embed] })
       })
-
   }
 }
