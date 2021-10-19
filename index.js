@@ -3,7 +3,7 @@ const { Client, Intents, Collection } = require('discord.js')
 const express = require('express')
 require('dotenv').config()
 
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] })
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS] })
 const eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.js'))
 
 for (const file of eventFiles) {
@@ -23,13 +23,13 @@ for (const file of commandFiles) {
   client.commands.set(command.data.name, command)
 }
 
-client.messageCommands = new Collection();
+client.messageCommands = new Collection()
 
-const messageCommandFiles = fs.readdirSync('./commands/messages').filter(file => file.endsWith('.js'));
+const messageCommandFiles = fs.readdirSync('./commands/messages').filter(file => file.endsWith('.js'))
 
 for (const file of messageCommandFiles) {
-	const command = require(`./commands/messages/${file}`);
-	client.messageCommands.set(command.name, command);
+  const command = require(`./commands/messages/${file}`)
+  client.messageCommands.set(command.name, command)
 }
 
 client.login(process.env.TOKEN)
