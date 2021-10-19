@@ -1,11 +1,11 @@
-const { Permissions } = require('discord.js');
+const { Permissions } = require('discord.js')
 const db = require('quick.db')
 
 module.exports = {
   name: 'porteria',
   description: '',
   execute (message, args) {
-    if (message.member.permissions.has(Permissions.FLAGS.MANAGE_CHANNELS)) return message.channel.send('No tienes permiso. :warning:')
+    if (!message.member.permissions.has(Permissions.FLAGS.MANAGE_CHANNELS)) return message.channel.send('No tienes permiso. :warning:')
 
     try {
       message.channel.send(`El nuevo canal de portería es <#${args[0]}>`)

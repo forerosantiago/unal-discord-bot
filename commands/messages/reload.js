@@ -1,6 +1,4 @@
 
-const fs = require('fs')
-
 module.exports = {
   name: 'reload',
   description: 'Reloads a command',
