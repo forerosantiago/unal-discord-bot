@@ -8,10 +8,12 @@ module.exports = {
     if (!message.member.permissions.has(Permissions.FLAGS.MANAGE_CHANNELS)) return message.channel.send('No tienes permiso. :warning:')
 
     try {
-      message.channel.send(`El nuevo canal de portería es <#${args[0]}>`)
-
+      message.client.channels.cache.get(args[0]).send("prueba")
       db.set(`guild_${message.guild.id}`, { porteria: args[0] })
+      
 
+
+      message.channel.send(`El nuevo canal de portería es <#${args[0]}>`)
       message.client.emit('guildMemberAdd', message.member)
       message.client.emit('guildMemberRemove', message.member)
     } catch (error) {

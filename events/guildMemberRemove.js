@@ -5,7 +5,7 @@ module.exports = {
   name: 'guildMemberRemove',
   once: false,
   execute (member, client) {
-    if (!db.get(`guild_${member.guild.id}`).porteria) return
+    if (db.get(`guild_${member.guild.id}`).porteria === null) return
     const embed = new MessageEmbed()
       .setColor('#a61c31')
       .setDescription(`**${member.user.tag}** se ha ido del servidor.`)

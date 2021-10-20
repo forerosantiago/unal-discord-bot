@@ -7,7 +7,7 @@ module.exports = {
   name: 'guildMemberAdd',
   once: false,
   execute (member, client) {
-    if (!db.get(`guild_${member.guild.id}`).porteria) return
+    if (db.get(`guild_${member.guild.id}`).porteria === null) return
     generateCarnet(member.user).then((carnet) => {
       const attachment = new MessageAttachment(carnet, 'carnet.png')
       const embed = new MessageEmbed()
