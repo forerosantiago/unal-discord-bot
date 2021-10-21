@@ -7,7 +7,7 @@ module.exports = {
   name: 'guildMemberAdd',
   once: false,
   execute (member, client) {
-    if (db.get(`guild_${member.guild.id}`).porteria === null) return
+    if (!db.get(`guild_${member.guild.id}.porteria`)) return
     generateCarnet(member.user).then((carnet) => {
       const attachment = new MessageAttachment(carnet, 'carnet.png')
       const embed = new MessageEmbed()
@@ -18,7 +18,7 @@ module.exports = {
         .setTimestamp()
         .setFooter(member.id)
 
-      client.channels.cache.get(db.get(`guild_${member.guild.id}`).porteria).send({ content: `<@${member.user.id}>`, embeds: [embed], files: [attachment] }).catch(err => {
+      client.channels.cache.get(db.get(`guild_${member.guild.id}.porteria`)).send({ content: `<@${member.user.id}>`, embeds: [embed], files: [attachment] }).catch(err => {
         console.log(err)
       })
     })
